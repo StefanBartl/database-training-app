@@ -1,0 +1,137 @@
+/*#region  CSS-Setup */
+
+/* futura: font-family: futura-pt,sans-serif; */
+@import url("https://use.typekit.net/izw3hmc.css");
+
+:root {
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  --font-futura: futura-pt,sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.375rem;
+  --fs-700: 2rem;
+
+/*? === design === */
+--main-colour: teal;
+--counter-colour: orange;
+
+/*? === text === */
+--text-optimal-width: clamp(45ch, 50%, 75ch);
+--text-main-colour:  white;
+}
+
+/* remove animations for people who turned them off*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* #region resets */
+
+/* box-sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  margin: 0; /* margins */
+}
+
+/* set up the body*/
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* #endregion */
+
+/* #endregion */
+
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--main-colour);
+  color: var(--text-main-colour);
+  font-family: var(--font-futura);
+}
+
+section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+
+/* ? Header section */
+
+.Header {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px var(--text-main-colour);
+}
+
+.Header > h1 {
+  font-size: var(--fs-700);
+  margin-left: auto;
+  margin-right: -8rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-left: solid 1px var(--text-main-colour);
+  border-right: solid 1px var(--text-main-colour);
+  border-width: 1rem;
+}
+
+.navlist {
+  width: 8rem;
+  margin-left: auto;
+  font-size: var(--fs-500);
+}
+
+.nav-link{
+  text-decoration: none;
+  color: var(--text-main-colour);
+  transition: .2s ease-in-out;
+  transition-property: color;
+}
+
+.nav-link:hover {
+  color: var(--counter-colour);
+  text-shadow: 2px 2px black;
+}
+
+/* ? Main section */
+
+.Main {
+}
+
+/* ? MongoDB section */
+
+.db {
+}
